@@ -1,0 +1,79 @@
+=== Run information ===
+
+Scheme:       weka.clusterers.SimpleKMeans -init 0 -max-candidates 100 -periodic-pruning 10000 -min-density 2.0 -t1 -1.25 -t2 -1.0 -N 4 -A "weka.core.EuclideanDistance -R first-last" -I 500 -num-slots 1 -S 10
+Relation:     coffee data with all data normalized
+Instances:    731
+Attributes:   16
+              Species_n
+              Variety_n
+              Processing.Method_n
+              Aroma_n
+              Flavor_n
+              Aftertaste_n
+              Acidity_n
+              Body_n
+              Balance_n
+              Uniformity_n
+              Clean.Cup_n
+              Sweetness_n
+              Cupper.Points_n
+              Moisture_n
+              Color_n
+              Altitude_n
+Test mode:    evaluate on training data
+
+
+=== Clustering model (full training set) ===
+
+
+kMeans
+======
+
+Number of iterations: 5
+Within cluster sum of squared errors: 92.71709251980513
+
+Initial starting points (random):
+
+Cluster 0: 0,0,0,0.780312,0.783416,0.77904,0.7503,0.636364,0.719114,0.667,0.267,0.6,0.631702,0,0,0
+Cluster 1: 0,0.653846,1,0.90036,0.918317,0.925505,0.890756,0.899394,0.864802,1,1,1,0.864802,0.647059,1,0.291414
+Cluster 2: 0,0,1,0.930372,0.949257,0.957071,0.920768,0.929697,0.893939,1,1,1,0.893939,0.764706,1,0.398012
+Cluster 3: 0,0.769231,1,0.90036,0.928218,0.925505,0.90036,0.899394,0.864802,1,1,1,0.864802,0.647059,1,0.30308
+
+Missing values globally replaced with mean/mode
+
+Final cluster centroids:
+                                   Cluster#
+Attribute              Full Data          0          1          2          3
+                         (731.0)    (136.0)    (101.0)    (268.0)    (226.0)
+============================================================================
+Species_n                 0.0356     0.0294          0     0.0821          0
+Variety_n                 0.3759     0.0854     0.3903     0.0475     0.9336
+Processing.Method_n       0.8119     0.2114          1     0.8871          1
+Aroma_n                   0.8969     0.8485     0.8951     0.9115     0.9093
+Flavor_n                  0.9164     0.8601      0.915     0.9327     0.9316
+Aftertaste_n              0.9183     0.8578     0.9171     0.9358     0.9345
+Acidity_n                 0.8915     0.8433     0.8887     0.9066     0.9038
+Body_n                    0.8978     0.8489      0.894     0.9144     0.9092
+Balance_n                 0.8604     0.8076     0.8588     0.8768     0.8735
+Uniformity_n              0.9829     0.9082          1          1          1
+Clean.Cup_n               0.9801     0.8931          1          1          1
+Sweetness_n               0.9831     0.9091          1          1          1
+Cupper.Points_n           0.8562     0.7923     0.8538      0.875     0.8733
+Moisture_n                0.5775     0.1328     0.6471     0.6912     0.6793
+Color_n                    0.871     0.3358          1     0.9851          1
+Altitude_n                0.2987     0.1468     0.2842     0.3578     0.3267
+
+
+
+
+Time taken to build model (full training data) : 0.03 seconds
+
+=== Model and evaluation on training set ===
+
+Clustered Instances
+
+0      136 ( 19%)
+1      101 ( 14%)
+2      268 ( 37%)
+3      226 ( 31%)
+

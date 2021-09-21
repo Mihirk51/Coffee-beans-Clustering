@@ -1,0 +1,73 @@
+=== Run information ===
+
+Scheme:       weka.clusterers.SimpleKMeans -init 0 -max-candidates 100 -periodic-pruning 10000 -min-density 2.0 -t1 -1.25 -t2 -1.0 -N 1 -A "weka.core.EuclideanDistance -R first-last" -I 500 -num-slots 1 -S 10
+Relation:     coffee data with all data normalized
+Instances:    731
+Attributes:   16
+              Species_n
+              Variety_n
+              Processing.Method_n
+              Aroma_n
+              Flavor_n
+              Aftertaste_n
+              Acidity_n
+              Body_n
+              Balance_n
+              Uniformity_n
+              Clean.Cup_n
+              Sweetness_n
+              Cupper.Points_n
+              Moisture_n
+              Color_n
+              Altitude_n
+Test mode:    evaluate on training data
+
+
+=== Clustering model (full training set) ===
+
+
+kMeans
+======
+
+Number of iterations: 1
+Within cluster sum of squared errors: 358.66480612697825
+
+Initial starting points (random):
+
+Cluster 0: 0,0,0,0.780312,0.783416,0.77904,0.7503,0.636364,0.719114,0.667,0.267,0.6,0.631702,0,0,0
+
+Missing values globally replaced with mean/mode
+
+Final cluster centroids:
+                                   Cluster#
+Attribute              Full Data          0
+                         (731.0)    (731.0)
+===========================================
+Species_n                 0.0356     0.0356
+Variety_n                 0.3759     0.3759
+Processing.Method_n       0.8119     0.8119
+Aroma_n                   0.8969     0.8969
+Flavor_n                  0.9164     0.9164
+Aftertaste_n              0.9183     0.9183
+Acidity_n                 0.8915     0.8915
+Body_n                    0.8978     0.8978
+Balance_n                 0.8604     0.8604
+Uniformity_n              0.9829     0.9829
+Clean.Cup_n               0.9801     0.9801
+Sweetness_n               0.9831     0.9831
+Cupper.Points_n           0.8562     0.8562
+Moisture_n                0.5775     0.5775
+Color_n                    0.871      0.871
+Altitude_n                0.2987     0.2987
+
+
+
+
+Time taken to build model (full training data) : 0.07 seconds
+
+=== Model and evaluation on training set ===
+
+Clustered Instances
+
+0      731 (100%)
+
