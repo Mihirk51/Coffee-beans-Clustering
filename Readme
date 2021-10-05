@@ -1,1 +1,70 @@
-#
+Coffee connoisseurs are always very particular 
+about their coffee, especially the bean that has 
+been used.
+
+These connoisseurs also like to brew their 
+own coffee every morning with the coffee 
+bean that they have selected very particularly. 
+
+They also spend time researching their coffee.
+
+By clustering different coffee bean variants together, we can use this information for 
+targeted marketing. 
+If a customer buys a variant, other similar variants can be 
+recommended to them.
+
+The extracted dataset contains 44 columns, all containing different information about the 
+coffee bean such as owner, country, company, farm name, etc.
+
+Some of the data is numeric while some isn’t as visible in the previous slide. Therefore, 
+data standardization will be performed. Also, normalization will be performed. 
+
+Out of this, a few relevant attributes will be used for the clustering job
+
+Out of these 44 attributes, we select the following relevant attributes:
+Species, Variety, Processing Method, Aroma, Flavor, Aftertaste, Acidity, Body,
+Balance, Uniformity, Clean Cup, Sweetness, Cupper Points, Moisture, Color,
+altitude mean meters.
+
+We prepare the data by first converting the non-numeric data into numeric. We do this by 
+numbering the unique non-numeric data from 0 to x, where x is the number of unique 
+records in each column.
+
+For the algorithm to work effectively and get accurate results, we normalize the data.
+Since the values of attributes range from a maximum of 2 in one column, to a maximum of 
+190164 in another, we normalize the data to bring the range down to 0 to 1.
+
+The only outliers present were in the altitude column. The values were 190164 meters, 
+110000 meters, and 11000 meters (before normalization). We delete these values since the altitude 
+of the highest peak in the world (Mt. Everest) is 8848.9 meters.
+At this point, our data is ready for the clustering job.
+
+The only outliers present were in the altitude column. The values were 190164 meters, 
+110000 meters, and 11000 meters (before normalization). We delete these values since the altitude 
+of the highest peak in the world (Mt. Everest) is 8848.9 meters.
+At this point, our data is ready for the clustering job.
+
+We will be using K-means for the clustering and use 'Weka' software package.
+
+Determining the optimal number of clusters in a data set is a fundamental issue in 
+partitioning clustering, such as k-means clustering, which requires the user to specify the 
+number of clusters k to be generated.
+There is no definite answer to this question. However, there are several methods that try to 
+optimize the number of clusters required. We will be using elbow method. 
+
+After succesful clustering, the centers of the clusters can be used to characterize the clusters. 
+These properties are the predominant properties of the coffee beans in a given cluster.
+
+We can interpret from the clustering result that a coffee bean that is high in Aroma, 
+flavor, aftertaste, acidity, and grows at a higher altitude belongs to cluster 5.
+Now, if any customer has bought a coffee bean in the past from this cluster and liked 
+it, we can recommend them a different coffee bean from the same cluster and be 
+confident that the customer will like this recommendation too. 
+
+This is how targeted marketing works these days. 
+
+This clustering recommendation can be implemented in online websites as well as 
+local coffee shops. The customer gets recommendations on the website online or if 
+they to a local coffee shop regularly, the barista at the coffee shop can access the 
+customers past purchases and recommend a coffee bean accordingly by looking at 
+the other coffee beans in the cluster.
